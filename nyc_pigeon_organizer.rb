@@ -2,8 +2,8 @@ def nyc_pigeon_organizer(data)
   # write your code here!
   
   new = {}
-  data.each do |bigsection|
-    bigsection.each do |section|
+  data.each do |category|
+    category.each do |section|
       new.each do |name|
         if section != name
           new << section.to_sym
@@ -18,13 +18,14 @@ def nyc_pigeon_organizer(data)
     
     data.each do |category|
       arr = []
-      sarr = []
+      tarr = []
       category.each do |type|
         type.each do |element|
           if element == name
             arr << category
-            
+            tarr << type
           end
+        end
       end
       [new[c], arr].to_h
     end
