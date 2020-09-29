@@ -32,7 +32,7 @@ def nyc_pigeon_organizer(data)
       end
       [new[c], arr].to_h
     end
-    
+    arr.map {|x| x.to_sym }
     c += 1
   end
   
