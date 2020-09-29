@@ -23,7 +23,7 @@ def nyc_pigeon_organizer(data)
           arr << bigsection.to_sym
         end
       end
-      [new[c]]
+      [[new[c]], [arr.split()] ]
       c += 1
     end
     
