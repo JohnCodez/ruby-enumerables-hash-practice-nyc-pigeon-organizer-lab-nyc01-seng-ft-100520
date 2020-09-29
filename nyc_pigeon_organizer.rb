@@ -4,9 +4,11 @@ def nyc_pigeon_organizer(data)
   new = {}
   data.each do |bigsection|
     bigsection.each do |section|
-      if name != new
-        new << name.to_sym
-    end
+      new.each do |name|
+        if section != name
+          new << section.to_sym
+        end
+      end
     end
   end
   
@@ -14,16 +16,20 @@ def nyc_pigeon_organizer(data)
   new.each do |key|
     name = key.to_s
     
-    data.each do |bigsection|
+    data.each do |category|
       arr = []
-      bigsection.each do |section|
-        if section == name
-          arr << bigsection.to_sym
-        end
+      sarr = []
+      category.each do |type|
+        type.each do |element|
+          if element == name
+            arr << category
+            
+          end
       end
       [new[c], arr].to_h
     end
     c += 1
+    
   end
   
   
