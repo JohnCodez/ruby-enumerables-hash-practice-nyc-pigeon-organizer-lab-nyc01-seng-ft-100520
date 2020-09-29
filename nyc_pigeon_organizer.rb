@@ -3,10 +3,12 @@ def nyc_pigeon_organizer(data)
   
   new = {}
   data.each do |category|
-    category.each do |section|
-      new.each do |name|
-        if section != name
-          new << section.to_sym
+    category.each do |type|
+      type.each do |element|  
+        new.each do |name|
+          if element != name
+            new << element.to_sym
+          end
         end
       end
     end
