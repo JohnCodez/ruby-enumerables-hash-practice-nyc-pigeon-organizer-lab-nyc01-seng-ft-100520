@@ -4,7 +4,7 @@ def nyc_pigeon_organizer(data)
   new = {}
   data.each do |bigsection|
     bigsection.each do |section|
-      section.find do |name|
+      section.each do |name|
         if name != new
           new << name.to_sym
         end
