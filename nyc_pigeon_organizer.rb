@@ -24,9 +24,8 @@ def nyc_pigeon_organizer(data)
         end
       end
       [new[c], arr].to_h
-      c += 1
     end
-    
+    c += 1
   end
   
   
