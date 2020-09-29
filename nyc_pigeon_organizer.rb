@@ -14,8 +14,9 @@ def nyc_pigeon_organizer(data)
     end
   end
   
-  c = 0
+  
   new.each do |key|
+    c = 0
     name = key.to_s
     
     data.each do |category|
@@ -31,8 +32,8 @@ def nyc_pigeon_organizer(data)
       end
       [new[c], arr].to_h
     end
-    c += 1
     
+    c += 1
   end
   
   
