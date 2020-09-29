@@ -2,16 +2,32 @@ def nyc_pigeon_organizer(data)
   # write your code here!
   
   new = {}
-  c = 1
   data.each do |bigsection|
     bigsection.each do |section|
       section.find do |name|
         if name != new
           new << name.to_sym
-          new[c] => 
         end
-        c += 1
       end
     end
   end
+  
+  c = 1
+  new.each do |key|
+    name = key.to_s
+    
+    data.each do |bigsection|
+      bigsection.each do |section|
+        if section == name 
+          key << bigsection.to_h
+          
+        
+      end
+    end
+    
+  end
+  
+  
+  
+  
 end
