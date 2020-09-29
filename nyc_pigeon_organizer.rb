@@ -17,9 +17,9 @@ def nyc_pigeon_organizer(data)
     name = key.to_s
     
     data.each do |bigsection|
+      arr = []
       bigsection.each do |section|
         if section == name
-          arr = []
           arr << bigsection.to_sym
           
         
