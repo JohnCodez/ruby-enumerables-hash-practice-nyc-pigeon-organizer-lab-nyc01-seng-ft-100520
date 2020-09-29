@@ -19,7 +19,7 @@ def nyc_pigeon_organizer(data)
     data.each do |bigsection|
       bigsection.each do |section|
         if section == name 
-           << bigsection
+           << bigsection.to_sym.join
           
         
       end
