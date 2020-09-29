@@ -12,7 +12,7 @@ def nyc_pigeon_organizer(data)
     end
   end
   
-  c = 1
+  c = 0
   new.each do |key|
     name = key.to_s
     
@@ -23,7 +23,7 @@ def nyc_pigeon_organizer(data)
           arr << bigsection.to_sym
         end
       end
-      [[new[c]], arr.split ].to_h
+      [new[c], arr].to_h
       c += 1
     end
     
