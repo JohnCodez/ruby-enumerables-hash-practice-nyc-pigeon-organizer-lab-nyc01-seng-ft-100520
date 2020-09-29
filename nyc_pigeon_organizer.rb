@@ -21,18 +21,18 @@ def nyc_pigeon_organizer(data)
     
     data.each do |category|
       arr = []
-      tarr = []
       category.each do |type|
+        tarr = []
         type.each do |element|
           if element == name
-            arr << category
+            arr << category.to_sym
             tarr << type
           end
         end
+        [arr, tarr].to_h
       end
       [new[c], arr].to_h
     end
-    arr.map {|x| x.to_sym }
     c += 1
   end
   
