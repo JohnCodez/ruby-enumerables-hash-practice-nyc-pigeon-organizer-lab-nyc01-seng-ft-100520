@@ -21,9 +21,10 @@ def nyc_pigeon_organizer(data)
       bigsection.each do |section|
         if section == name
           arr << bigsection.to_sym
-          
-        
+        end
       end
+      [new[c]]
+      c += 1
     end
     
   end
